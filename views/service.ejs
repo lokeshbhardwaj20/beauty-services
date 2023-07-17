@@ -1,0 +1,45 @@
+<%- include("partials/header") %>
+    <br><br>
+    <h1>Our Services</h1>
+    <br>
+    <div class="servicehead">
+        <div class="servicetype">
+            <h3> Hair</h3>
+        </div>
+        <div class="servicetype">
+            <h3>Makeup</h3>
+        </div>
+        <div class="servicetype">
+            <h3> Nail</h3>
+        </div>
+    </div>
+    <br>
+    <div class="service-container row">
+        <% members.map(function(e) { %>
+            <div class="servicecard col-sm-12">
+                <div class="businesstitle">
+                    <h4><strong>
+                            <%= e.organisation %>
+                        </strong></h4>
+                </div> <hr>
+                <div class="businessdetail">
+                    <p>
+                        <%= e.about %>
+                    </p>
+                    <div class="linkdetails">
+                        <a href="<%= e.facebookUrl %>">facebook</a>
+                        <a href="<%= e.instaUrl %>">instagram</a>
+                        <a href="<%= e.whatsappUrl %>">whatsapp</a>
+                    </div>
+                </div>
+            </div>
+            <% }); %>
+    </div>
+
+
+
+
+
+
+
+    <%- include("partials/footer") %>

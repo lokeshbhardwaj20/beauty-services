@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <style>
+        table,
+        th,
+        td {
+
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+
+        table {
+            text-align: center;
+            width: 100%;
+        }
+
+        th {
+            background-color: skyblue;
+        }
+
+        .newbtn {
+            /* border: none; */
+            background-color: red;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body style="width: 150%;">
+    <h1> Admin Dashboard</h1>
+
+    <div class="customer-details">
+        <h3>Add New Client </h3>
+        <% members.map(e=>{%>
+            <form action="/updatedetail" method="post">
+
+                <input type="string" value="<%= e._id %>" name="serviceId" id="nameInput">
+                <input type="text" placeholder="Full name" name="fullname" value="<%=  e.fname %> ">
+                <input type="text" placeholder="Name of individual/Organisation" name="companyname"
+                    value="<%=e.organisation %> ">
+                <input type="email" name="email" id="" placeholder="E-mail" value="<%=  e.email %>">
+                <input type="text" placeholder="address & details" name="address" value="<%=   e.type %>">
+                <input type="number" placeholder="PIN" name="pin" value="<%=   e.pin %>">
+                <input type="text" placeholder="State" name="state" value="<%=   e.state %>">
+                <input type="url" name="flink" id="" placeholder="Facbook link" value="<%=  e.facebookUrl  %>">
+                <input type="url" name="ilink" id="" placeholder="Insta link" value="<%=   e.instaUrl  %>">
+                <input type="url" name="wlink" id="" placeholder="Whats app link" value="<%=  e.whatsappUrl  %>">
+                <input type="text" name="about" placeholder="Details of client" value="<%=  e.about %>">
+                <button class="btn btn-primary" type="submit" >Update Client</button>
+                
+
+            </form>
+            <% });%>
+                <h3> All Client Details:</h3>
+                <table>
+                    <tr>
+                        <th>s no.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>E-mail</th>
+                        <th>Artist type</th>
+                        <th>Address</th>
+                        <th>Area PIN code</th>
+                        <th>State</th>
+                        <th>Facebook link</th>
+                        <th>Inst link</th>
+                        <th>Whats app link</th>
+                        <Th>Action</Th>
+                    </tr>
+                    <% members.map((e,index)=>{%>
+                        <tr>
+                            <td>
+                                <%= index+1 %>
+                            </td>
+                            <td>
+                                <%= e.fname %>
+                            </td>
+                            <td>
+                                <%= e.organisation %>
+                            </td>
+                            <td>
+                                <%= e.email %>
+                            </td>
+                            <td>
+                                <%= e.type %>
+                            </td>
+                            <td>
+                                <%= e.address %>
+                            </td>
+                            <td>
+                                <%= e.pin %>
+                            </td>
+                            <td>
+                                <%= e.state %>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <form action="/compose/admin" method="post">
+                                    <input type="hidden" name="getmemberid" value="<%= e._id %>">
+                                    <button type="submit" class="newbtn">Delete</button>
+                                </form>
+                            </td>
+
+                            <td></td>
+                            <% });%>
+                        </tr>
+                </table>
+    </div>
+    <div class="customer-message">
+        <h3>Customer Messages</h3>
+        <table>
+            <tr>
+                <th>S no.</th>
+                <th>Full name</th>
+                <th>Contact</th>
+                <th>E-mail</th>
+                <th>Message</th>
+                <th>Action</th>
+            </tr>
+            <% contacts.map((e,index)=>{ %>
+                <tr>
+
+                    <th>
+                        <%= index+1 %>
+                    </th>
+                    <th>
+                        <%= e.name %>
+                    </th>
+                    <th>
+                        <%= e.tel %>
+                    </th>
+                    <th>
+                        <%= e.email %>
+                    </th>
+                    <th>
+                        <%= e.message %>
+                    </th>
+                    <th>
+                        <form action="/compose/admin" method="post">
+                            <input type="hidden" name="getid" value="<%= e._id %>">
+                            <button type="submit" class="newbtn">Delete</button>
+                        </form>
+                    </th>
+                    <% });%>
+                </tr>
+        </table>
+
+    </div>
+
+
+    <script>
+        // Disable editing when the page loads
+        document.getElementById("nameInput").readOnly = true;
+    
+        // Add event listener to the edit button
+        document.getElementById("editButton").addEventListener("click", function() {
+          // Enable editing when the button is clicked
+          document.getElementById("nameInput").readOnly = false;
+        });
+      </script>
+
+
+
+
+
+
+</body>
+
+</html>

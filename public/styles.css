@@ -1,0 +1,574 @@
+/* Global Styles */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  background-color: #Fff;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* /* Header */
+
+header {
+  height: 13vh;
+  display: flex;
+  align-items: center;
+  background-color: #DB005B;
+  color: white;
+}
+
+.head {
+  font-size: 40px;
+  margin-left: 150px;
+}
+
+nav {
+  margin-left: 350px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 2rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+nav ul li a:hover {
+  font-weight: bold;
+  color: #FFD700;
+}
+
+.btn {
+  margin-left: 100px;
+}
+
+/* Main Content */
+
+.main-heading {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  width: 48vw;
+  /* height: 50vh; */
+  text-align: center;
+}
+
+.dottedhr {
+  background-color: #EAF6F6;
+  border-style: none;
+  border-top-style: dotted;
+  border-color: grey;
+  border-top-width: 8px;
+  width: 7%;
+}
+
+.hrs {
+  display: flex;
+  justify-content: center;
+}
+
+section a {
+  margin: 10px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+section a:hover {
+  color: #DB005B;
+}
+
+
+.row h1 {
+  text-align: center;
+  color: #DB005B;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2:hover {
+  color: #DB005B;
+}
+
+.row {
+  display: flex;
+  margin: 70px 30px;
+  text-decoration: none;
+}
+
+.col-lg-4 {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  word-spacing: 1.5px;
+  line-height: 1.5;
+  opacity: 0.8;
+  font-size: 1em;
+
+}
+
+/* service card */
+.roundimg{
+  margin-bottom: 30px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+}
+
+
+
+
+.content {
+  font-family: 'Montserrat', sans-serif;
+  margin: 20px 40px;
+  opacity: 0.7;
+}
+
+/* Footer */
+
+footer {
+  height: 100px;
+  background-color: #DB005B;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+/* about page */
+.about {
+  margin-top: 50px;
+  width: 50%;
+  /* height: 500px; */
+  text-align: center;
+  position: relative;
+  left: 330px;
+
+}
+
+.containerabout {
+  margin: 90px 0 50px 0;
+  display: flex;
+  align-items: flex-start;
+  font-size: x-large;
+  /* font-weight: 600; */
+
+}
+
+
+
+.keyvalue {
+  /* background-color: #DB005B; */
+  padding: 0 15px 0 15px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  width: 450px;
+  height: 550px;
+  left: 30px;
+  position: relative;
+  /* Enable positioning */
+  z-index: 5;
+  /* Ensure the keyvalue box appears on top */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add box shadow */
+}
+
+.img-container {
+  width: 100%;
+  /* Make the image fill the width of the container */
+  height: 100%;
+  /* Make the image fill the height of the container */
+  object-fit: cover;
+}
+
+.picvalue {
+  overflow: hidden;
+  border: 1px solid grey;
+  border-radius: 50px;
+  width: 450px;
+  height: 550px;
+  margin-top: 40px;
+  /* Position the picvalue box 40px below the keyvalue box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Add box shadow */
+}
+
+.keyhead {
+  margin: 20px 0 10px 0;
+}
+
+.keypara {
+  margin: 5px 10px 0 10px;
+}
+
+.aboutimg {
+  opacity: 0.2;
+
+}
+
+/* //our Service menu css */
+.servicehead {
+  display: flex;
+  justify-content: center;
+  /* Center the items horizontally */
+  gap: 100px;
+  /* Set the desired gap between items */
+}
+
+.servicetype {
+  background-color: #DB005B;
+  color: #EAF6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  border: 1px solid #DB005B;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* border-radius: 10px; */
+}
+
+
+.servicecard {
+  /* display: flex; */
+  color: black;
+  text-align: center;
+  width: 500px;
+  height: 250px;
+  border-top: 10px solid #DB005B;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.businesstitle h4 {
+  margin-top: 0;
+}
+
+.businessdetail p {
+  margin-bottom: 10px;
+}
+
+.linkdetails {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.linkdetails a {
+  transition: all 0.3s ease;
+}
+
+.linkdetails a:hover {
+  color: #db005b;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.service-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+
+.servicecard hr {
+  color: grey;
+  width: 70%;
+  margin-left: 62px;
+}
+
+
+
+input {
+  width: 400px;
+  margin: 30px 100px 10px 100px;
+  border-style: none;
+  border-bottom: 2px solid #db005b;
+}
+
+input[type=text]:focus {
+  border-radius: 10px;
+  color: grey;
+  outline: 2px solid #db005b;
+}
+
+input[type=email]:focus {
+  border-radius: 10px;
+  color: grey;
+  outline: 2px solid #db005b;
+}
+
+input[type=number]:focus {
+  border-radius: 10px;
+  color: grey;
+  outline: 2px solid #db005b;
+}
+input[type=url]:focus {
+  border-radius: 10px;
+  color: grey;
+  outline: 2px solid #db005b;
+}
+
+textarea {
+  border-radius: 10px;
+  color: black;
+  margin-top: 20px;
+  border: 2px solid #db005b;
+  width: 400px;
+
+}
+
+textarea:focus {
+  border-radius: 10px;
+  color: grey;
+  outline: 1px solid #db005b;
+
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-container div {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.registerform {
+  width: 600px;
+  line-height: 3em;
+  margin-top: 100px;
+  padding-top: 40px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.registerform button{
+  margin-left: 230px;
+}
+
+.contactform {
+  width: 600px;
+  height: 850px;
+  line-height: 40px;
+  border-radius: 3%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.btn {
+  background: #db005b;
+  background-image: -webkit-linear-gradient(top, #db005b, #db005b);
+  background-image: -moz-linear-gradient(top, #db005b, #db005b);
+  background-image: -ms-linear-gradient(top, #db005b, #db005b);
+  background-image: -o-linear-gradient(top, #db005b, #db005b);
+  background-image: linear-gradient(to bottom, #db005b, #db005b);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn {
+  margin: 20px
+}
+
+.btn:hover {
+  background: #FF0060;
+  color: #fff;
+  background-image: -webkit-linear-gradient(top, #FF0060, #FF0060);
+  background-image: -moz-linear-gradient(top, #FF0060, #FF0060);
+  background-image: -ms-linear-gradient(top, #FF0060, #FF0060);
+  background-image: -o-linear-gradient(top, #FF0060, #FF0060);
+  background-image: linear-gradient(to bottom, #FF0060, #FF0060);
+  text-decoration: none;
+}
+
+
+.formsection {
+  justify-content: center;
+  text-align: center;
+
+}
+
+.formsection div {
+
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Mobile Devices */
+@media only screen and (max-width: 767px) {
+
+  /* Header */
+  .head {
+    font-size: 24px;
+    margin-left: 20px;
+  }
+
+  nav {
+    margin-left: 20px;
+  }
+
+  /* Main Content */
+  .main-heading {
+    font-size: 20px;
+    width: 90vw;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    margin: 30px 10px;
+  }
+
+  .col-lg-4 {
+    flex: 1 0 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* About Page */
+  .about {
+    width: 90%;
+    left: 5%;
+  }
+
+  .containerabout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .keyvalue,
+  .picvalue {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  /* Service Cards */
+  .service-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicecard {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  /* Forms */
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .registerform,
+  .contactform {
+    width: 90%;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  /* Footer */
+  footer {
+    height: auto;
+    padding: 20px;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    /* background-color: #fff; */
+  }
+}
+
+/* :root {
+  --main-bg-color: rgba(255, 182, 193, 0.2); /* Light pink background color with 20% opacity */
+/* } */
+
+/* body {
+  background-color: var(--main-bg-color); /* Set the background color using the CSS variable */
+  /* background-image: linear-gradient(35deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)), linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0.2)); Define the repeating pattern using linear gradients */
+  /* background-size: 20px 20px; Adjust the size of the pattern */
+/* }  */
+
+/* .keyvalue, .picvalue,.servicecard,.registerform,.contactform{
+  background-color: #fff;
+
+}  */
+
+
+/* remove arrows from input buttons */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+

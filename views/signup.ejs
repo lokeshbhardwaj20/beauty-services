@@ -1,0 +1,29 @@
+<%- include("partials/header") %>
+
+    <body>
+        <h1 style="text-align: center; margin-top: 50px;"> <strong>Join our Membership !!</strong>
+        </h1>
+        <div class="register-container" id="form-container">
+            <!-- <h1>oin our community !!</h1> -->
+            <div class="registerform" id="formstyle">
+                <!-- <h3>Join Us</h3> -->
+                <form action="/signup" method="post">
+                    <input type="text" placeholder="Full Name" name="fname" autocomplete="off">
+                    <input type="text" placeholder="Organisation Name" name="organisation" autocomplete="off" required>
+                    <input type="email" name="email" id="email" placeholder="Email-id" autocomplete="off" required>
+                    <input type="text" name="type" placeholder="Makeup/ Hair/ Nail Artist " autocomplete="off" required>
+                    <input type="text" name="address" placeholder="Address" autocomplete="off" required>
+                    <input type="number" name="pin" placeholder="PIN" autocomplete="off" required>
+                    <input type="text" name="state" placeholder="State" autocomplete="off" required>
+                    <input type="text" name="about" placeholder="About you" autocomplete="off">
+                    <input type="url" name="facebookUrl" id="" placeholder="Facebook Url">
+                    <input type="url" name="instaUrl" id="" placeholder="Instagram Url">
+                    <input type="url" name="whatsappUrl" id="" placeholder="Whatsapp Url">
+                    <button type="submit" class="btn">Register</button>
+
+                </form>
+            </div>
+        </div>
+
+
+        <%- include("partials/footer") %>
